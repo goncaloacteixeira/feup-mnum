@@ -63,14 +63,23 @@ double relativeError(double realValue, double aprValue)
 double falsePosition(double &a, double &b, double p)
 {
     double rr;
+    long count = 0;
     while (abs(b-a) > p)
     {
         rr = (a * function(b) - b * function(a)) / (function(b) - function(a));
-        if (function(a) * function(rr) <= 0)
+        if (function(a) * function(rr) <= 0.0) {
             b = rr;
-        else
+            a /= 2.0;
+        }
+        else {
             a = rr;
+            b /= 2.0;
+        }
+        cout << a << ", " << rr << ", " << b << ", " << function(rr) << endl;
+        count += 1;
     }
+    cout << "With precision set to: " << p << " it took " << count << " iterations." << endl << endl;
+    return rr;
 }
 
 
@@ -84,7 +93,7 @@ int main()
 
     a = 0.0;
     b = 10.0;
-    sol_1 = bissec(a, b, precision);
+    sol_1 = falsePosition(a, b, precision);
 
     cout << setprecision(20) << "First solution (CHEATING): " << sol[0] << endl;
     cout << setprecision(20) << "First solution (1): " << sol_1 << endl;
@@ -94,7 +103,7 @@ int main()
     a = -10.0;
     b = 0.0;
 
-    sol_2 = bissec(a, b, precision);
+    sol_2 = falsePosition(a, b, precision);
 
     cout << setprecision(20) << "Second solution (CHEATING): " << sol[1] << endl;
     cout << setprecision(20) << "Second solution (1): " << sol_2 << endl << endl;
