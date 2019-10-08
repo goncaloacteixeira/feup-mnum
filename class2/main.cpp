@@ -26,7 +26,7 @@ double function(double x)
     return 2.0*x*x - 5.0*x - 2.0;
 }
 
-double bissec(double a, double b, double p)
+double bissec(double &a, double &b, double p)
 {
     double m;
     long count = 0;
@@ -45,21 +45,48 @@ double bissec(double a, double b, double p)
 }
 
 
+double absolutError(double realValue, double aprValue)
+{
+    return abs(realValue - aprValue);
+}
+
+double absolutMaxError(double a, double b)
+{
+    return abs(a-b)/2;
+}
+
+double relativeError(double realValue, double aprValue)
+{
+    return absolutError(realValue, aprValue) / realValue;
+}
+
 
 int main()
 {
     double sol[2];
     solver(sol);
     double sol_1, sol_2;
-    sol_1 = bissec(0.0, 20.0, 0.00000000000001);
+    double a,  b;
+    double precision = 0.0000000000000001;
+
+    a = 0.0;
+    b = 10.0;
+    sol_1 = bissec(a, b, precision);
 
     cout << setprecision(20) << "First solution (CHEATING): " << sol[0] << endl;
-    cout << setprecision(20) << "First solution (1): " << sol_1 << endl << endl;
+    cout << setprecision(20) << "First solution (1): " << sol_1 << endl;
+    cout << setprecision(10) << "Absolut error: " << absolutError(sol[0], sol_1) << endl;
+    cout << setprecision(10) << "Absolut max error: " << absolutMaxError(a, b) << endl << endl;
 
-    sol_2 = bissec(-20.0, 0.0, 0.00000000000001);
+    a = -10.0;
+    b = 0.0;
+
+    sol_2 = bissec(a, b, precision);
 
     cout << setprecision(20) << "Second solution (CHEATING): " << sol[1] << endl;
     cout << setprecision(20) << "Second solution (1): " << sol_2 << endl << endl;
+    cout << setprecision(10) << "Absolut error: " << absolutError(sol[1], sol_2) << endl;
+    cout << setprecision(10) << "Absolut max error: " << absolutMaxError(a, b) << endl;
 
     return 0;
 }
