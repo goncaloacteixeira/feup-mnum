@@ -60,6 +60,19 @@ double relativeError(double realValue, double aprValue)
     return absolutError(realValue, aprValue) / realValue;
 }
 
+double falsePosition(double &a, double &b, double p)
+{
+    double rr;
+    while (abs(b-a) > p)
+    {
+        rr = (a * function(b) - b * function(a)) / (function(b) - function(a));
+        if (function(a) * function(rr) <= 0)
+            b = rr;
+        else
+            a = rr;
+    }
+}
+
 
 int main()
 {
@@ -67,7 +80,7 @@ int main()
     solver(sol);
     double sol_1, sol_2;
     double a,  b;
-    double precision = 0.0000000000000001;
+    double precision = 0.00000000001;
 
     a = 0.0;
     b = 10.0;
