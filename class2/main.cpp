@@ -60,6 +60,7 @@ double relativeError(double realValue, double aprValue)
     return absolutError(realValue, aprValue) / realValue;
 }
 
+// TODO - Acabar o algoritmo - Illinois' algorithm
 double falsePosition(double &a, double &b, double p)
 {
     double rr;
@@ -69,11 +70,9 @@ double falsePosition(double &a, double &b, double p)
         rr = (a * function(b) - b * function(a)) / (function(b) - function(a));
         if (function(a) * function(rr) <= 0.0) {
             b = rr;
-            a /= 2.0;
         }
         else {
             a = rr;
-            b /= 2.0;
         }
         cout << a << ", " << rr << ", " << b << ", " << function(rr) << endl;
         count += 1;
