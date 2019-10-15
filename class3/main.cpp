@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
@@ -7,17 +8,16 @@ using namespace std;
  *      - Picard Peano
  *      - Newton
  *  Sistemas de equações
- *
  */
 
 double func(double x) {
-    return 2*x*x - 5*x -3;
+    return 2*x*x - 5*x - 3;
 }
 
 void solver(double* sol)
 {
-    sol[0] = (5.0 + sqrt(5.0*5.0 + 4.0*3.0*2.0)) / (2.0*2.0);
-    sol[1] = (5.0 - sqrt(5.0*5.0 + 4.0*3.0*2.0)) / (2.0*2.0);
+    sol[0] = (5.0 - sqrt(5.0*5.0 + 4.0*3.0*2.0)) / (2.0*2.0);
+    sol[1] = (5.0 + sqrt(5.0*5.0 + 4.0*3.0*2.0)) / (2.0*2.0);
 }
 
 /*      Método de Picard Peano
@@ -50,16 +50,14 @@ double picard(string funcao) {
             xn = g2(xn);
         }
     }
-
     return xn;
 }
+
 
 int main() {
     double sol[2];
     solver(sol);
-    cout << "sol correta: " << sol[0] << " ; " << sol[1] << endl;
+    cout << setprecision(20) << "sol correta: " << sol[0] << " ; " << sol[1] << endl;
 
-    cout << picard("g2") << endl << picard("g1");
-
-
+    cout << setprecision(20) << picard("g2") << endl << picard("g1");
 }
