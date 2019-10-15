@@ -40,15 +40,23 @@ double picard(string funcao) {
     cout << "guess: ";
     cin >> xn;
 
+    int i = 10000;
+
     if (funcao == "g1") {
-        while (abs(xn - g1(xn))) {
+        while (abs(xn - g1(xn)) && i != 0) {
             xn = g1(xn);
+            i--;
         }
     }
     else {
-        while (abs(xn - g2(xn))) {
+        while (abs(xn - g2(xn)) && i != 0) {
             xn = g2(xn);
+            i--;
         }
+    }
+    if (i == 0) {
+        cerr << "diverges\ntry a new gess" << endl;
+        exit(1);
     }
     return xn;
 }
@@ -57,7 +65,7 @@ double picard(string funcao) {
 int main() {
     double sol[2];
     solver(sol);
-    cout << setprecision(20) << "sol correta: " << sol[0] << " ; " << sol[1] << endl;
 
+    cout << setprecision(20) << "sol correta: " << sol[0] << " ; " << sol[1] << endl;
     cout << setprecision(20) << picard("g2") << endl << picard("g1");
 }
