@@ -40,8 +40,9 @@ double bissec(double func (double), double a, double b, double p, long* count) {
 
 double falsePosition(double func (double), double a, double b, double p, long* count)
 {
+    long max_iterations = 1000;
     double rr;
-    while (abs(b-a) > p)
+    while (abs(b-a) > p && (*count) < max_iterations)
     {
         rr = (a * func(b) - b * func(a)) / (func(b) - func(a));
         if (func(a) * func(rr) <= 0.0) {
@@ -51,12 +52,10 @@ double falsePosition(double func (double), double a, double b, double p, long* c
             a = rr;
         }
         // cout << a << ", " << rr << ", " << b << ", " << function(rr) << endl;
-        count += 1;
+        (*count) += 1;
     }
     return rr;
 }
-
-
 
 
 
@@ -65,8 +64,6 @@ int main() {
     double a, b, p;
     long count;
 
-    count = 0;
-
     cout << "a: ";
     cin >> a;
     cout << "b: ";
@@ -74,6 +71,12 @@ int main() {
     cout << "precision: ";
     cin >> p;
 
-    cout << "Result: " << setprecision(20) << falsePosition(func1, a, b, p, &count);
+    count = 0;
+    cout << "Result (bissection) : " << setprecision(20) << bissec(func1, a, b, p, &count);
     cout << " with precision set to: " << setprecision(6) << p << " ; it took " << count << " iterations\n";
+
+    count = 0;
+    cout << "Result (false position) : " << setprecision(20) << falsePosition(func1, a, b, p, &count);
+    cout << " with precision set to: " << setprecision(6) << p << " ; it took " << count << " iterations\n";
+
 }
