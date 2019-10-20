@@ -169,7 +169,7 @@ void secondExercise(void) {
      *
      *  - exp(-x); -log(x);
      *
-     *  we are going to use only the second one
+     *  we are going to use only the first one
      */
     double p = 0.0000000001;
 
