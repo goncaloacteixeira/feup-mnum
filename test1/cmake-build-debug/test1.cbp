@@ -83,6 +83,12 @@
 		<Unit filename="/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/main.cpp">
 			<Option target="test1"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.cpp">
+			<Option target="test1"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.h">
+			<Option target="test1"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

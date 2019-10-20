@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+realFunctions.o: realFunctions.cpp.o
+
+.PHONY : realFunctions.o
+
+# target to build an object file
+realFunctions.cpp.o:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/realFunctions.cpp.o
+.PHONY : realFunctions.cpp.o
+
+realFunctions.i: realFunctions.cpp.i
+
+.PHONY : realFunctions.i
+
+# target to preprocess a source file
+realFunctions.cpp.i:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/realFunctions.cpp.i
+.PHONY : realFunctions.cpp.i
+
+realFunctions.s: realFunctions.cpp.s
+
+.PHONY : realFunctions.s
+
+# target to generate assembly for a file
+realFunctions.cpp.s:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/realFunctions.cpp.s
+.PHONY : realFunctions.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... realFunctions.o"
+	@echo "... realFunctions.i"
+	@echo "... realFunctions.s"
 .PHONY : help
 
 
