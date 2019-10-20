@@ -3,6 +3,7 @@
 #include <iomanip>
 
 #include "realFunctions.h"
+#include "exercicios_1.h"
 
 using namespace std;
 
@@ -35,7 +36,7 @@ double func4(double x) {
 
 
 int main() {
-    double a, b, p, g;
+    /*double a, b, p, g;
     long count;
 
     cout << "*** Métodos intervalares ***\n";
@@ -66,5 +67,8 @@ int main() {
 
     count = 0;
     cout << "Result (Picard-Peano) : " << setprecision(20) << picardPeano(g1, g, p, &count);
-    cout << " with precision set to: " << setprecision(6) << p << " ; it took " << count << " iterations\n";
+    cout << " with precision set to: " << setprecision(6) << p << " ; it took " << count << " iterations\n";*/
+
+
+    secondExercise();
 }

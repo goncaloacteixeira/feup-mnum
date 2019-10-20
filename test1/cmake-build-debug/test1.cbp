@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.cpp">
+			<Option target="test1"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.h">
+			<Option target="test1"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/main.cpp">
 			<Option target="test1"/>
 		</Unit>

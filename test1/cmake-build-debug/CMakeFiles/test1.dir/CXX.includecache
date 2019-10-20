@@ -6,19 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/main.cpp
-iostream
--
-cmath
--
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.cpp
+realFunctions.h
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.h
+exercicios_1.h
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.h
 iomanip
 -
-realFunctions.h
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.h
 
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.cpp
-realFunctions.h
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.h
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.h
 
 /cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.h
 iostream

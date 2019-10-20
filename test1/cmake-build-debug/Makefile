@@ -123,6 +123,33 @@ test1/fast:
 	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
 .PHONY : test1/fast
 
+exercicios_1.o: exercicios_1.cpp.o
+
+.PHONY : exercicios_1.o
+
+# target to build an object file
+exercicios_1.cpp.o:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/exercicios_1.cpp.o
+.PHONY : exercicios_1.cpp.o
+
+exercicios_1.i: exercicios_1.cpp.i
+
+.PHONY : exercicios_1.i
+
+# target to preprocess a source file
+exercicios_1.cpp.i:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/exercicios_1.cpp.i
+.PHONY : exercicios_1.cpp.i
+
+exercicios_1.s: exercicios_1.cpp.s
+
+.PHONY : exercicios_1.s
+
+# target to generate assembly for a file
+exercicios_1.cpp.s:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/exercicios_1.cpp.s
+.PHONY : exercicios_1.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test1"
 	@echo "... edit_cache"
+	@echo "... exercicios_1.o"
+	@echo "... exercicios_1.i"
+	@echo "... exercicios_1.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
