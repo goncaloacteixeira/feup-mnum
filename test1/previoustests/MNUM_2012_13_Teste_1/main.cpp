@@ -5,6 +5,8 @@
 #include <iostream>
 #include <iomanip>
 
+#include "newtonSystem.h"
+
 using namespace std;
 
 double func(double x) {
@@ -13,6 +15,32 @@ double func(double x) {
 
 double diffFunc(double x) {
     return 3.0*x*x + 4.0*x + 10.0;
+}
+
+#include <cmath>
+
+double f1(double x, double y) {
+    return y - log(x - 1.0);
+}
+
+double f1x(double x, double y) {
+    return 1.0 /(x - 1.0);
+}
+
+double f1y(double x, double y) {
+    return 1;
+}
+
+double f2(double x, double y) {
+    return y*y + (x-3.0)*(x-3.0) - 4.0;
+}
+
+double f2x(double x, double y) {
+    return 2.0*(x - 3.0);
+}
+
+double f2y(double x, double y) {
+    return 2.0*y;
 }
 
 void ex1(void) {
@@ -35,9 +63,12 @@ void ex5(void) {
         xn = xn - func(xn) / diffFunc(xn);
     }
 }
-// TODO - Exercicio 6
+
 void ex6(void) {
-    return;
+    cout << setprecision(4) << fixed;
+
+    newtonMethod(f1, f2, f1x, f1y, f2x, f2y);
+
 }
 
 
@@ -48,5 +79,9 @@ int main(void) {
 
     cout << "\t--ex 5--\n";
     ex5();
+
+    cout << "\t--ex 6--\n";
+    ex6();
+
     return 0;
 }
