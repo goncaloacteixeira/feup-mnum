@@ -1,1 +1,1 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/test1.dir/main.cpp.o CMakeFiles/test1.dir/realFunctions.cpp.o CMakeFiles/test1.dir/exercicios_1.cpp.o  -o test1.exe -Wl,--out-implib,libtest1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/test1.dir/main.cpp.o CMakeFiles/test1.dir/realFunctions.cpp.o CMakeFiles/test1.dir/exercicios_1.cpp.o CMakeFiles/test1.dir/systemSolver.cpp.o  -o test1.exe -Wl,--out-implib,libtest1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

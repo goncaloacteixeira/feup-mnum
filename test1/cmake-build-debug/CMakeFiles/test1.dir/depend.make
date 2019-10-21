@@ -8,7 +8,11 @@ CMakeFiles/test1.dir/exercicios_1.cpp.o: ../realFunctions.h
 CMakeFiles/test1.dir/main.cpp.o: ../exercicios_1.h
 CMakeFiles/test1.dir/main.cpp.o: ../main.cpp
 CMakeFiles/test1.dir/main.cpp.o: ../realFunctions.h
+CMakeFiles/test1.dir/main.cpp.o: ../systemSolver.h
 
 CMakeFiles/test1.dir/realFunctions.cpp.o: ../realFunctions.cpp
 CMakeFiles/test1.dir/realFunctions.cpp.o: ../realFunctions.h
+
+CMakeFiles/test1.dir/systemSolver.cpp.o: ../systemSolver.cpp
+CMakeFiles/test1.dir/systemSolver.cpp.o: ../systemSolver.h
 

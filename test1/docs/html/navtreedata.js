@@ -22,7 +22,7 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Test1", "index.html", [
+  [ "MNUM Test 1", "index.html", [
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
@@ -35,7 +35,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"files.html"
+"exercicios__1_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/previoustests/MNUM_2012_13_Teste_1/newtonSystem.cpp
+newtonSystem.h
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/previoustests/MNUM_2012_13_Teste_1/newtonSystem.h
+
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/previoustests/MNUM_2012_13_Teste_1/newtonSystem.h
+iostream
+-
+

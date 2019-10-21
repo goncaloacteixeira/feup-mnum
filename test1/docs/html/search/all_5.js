@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newton_10',['newton',['../real_functions_8cpp.html#a9c88bc6a56f98ec51ce7632be06d38ed',1,'newton(double func(double), double diffFunc(double), double g, double p, long *count):&#160;realFunctions.cpp'],['../real_functions_8h.html#a9c88bc6a56f98ec51ce7632be06d38ed',1,'newton(double func(double), double diffFunc(double), double g, double p, long *count):&#160;realFunctions.cpp']]]
+  ['hn_15',['hn',['../system_solver_8cpp.html#a95f8aaa19de64d2cc6b0abad8cc66690',1,'systemSolver.cpp']]]
 ];
