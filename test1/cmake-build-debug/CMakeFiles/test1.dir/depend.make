@@ -4,6 +4,7 @@
 CMakeFiles/test1.dir/exercicios_1.cpp.o: ../exercicios_1.cpp
 CMakeFiles/test1.dir/exercicios_1.cpp.o: ../exercicios_1.h
 CMakeFiles/test1.dir/exercicios_1.cpp.o: ../realFunctions.h
+CMakeFiles/test1.dir/exercicios_1.cpp.o: ../systemSolver.h
 
 CMakeFiles/test1.dir/main.cpp.o: ../exercicios_1.h
 CMakeFiles/test1.dir/main.cpp.o: ../main.cpp

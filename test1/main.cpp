@@ -103,7 +103,13 @@ int main() {
     cout << "Result (Picard-Peano) : " << setprecision(20) << picardPeano(g1, g, p, &count);
     cout << " with precision set to: " << setprecision(6) << p << " ; it took " << count << " iterations\n";*/
 
+    cout << "first ex\n";
+    firstExercise();
+    cout << "\nsecond ex\n";
+    secondExercise();
+    cout << "\nthird ex\n";
+    thirdExercise();
 
-    sysNewton(f1,f2,f1x,f1y,f2x,f2y,0.00001);
-    sysPicard(g1,g2,0.00001);
+//    sysNewton(f1,f2,f1x,f1y,f2x,f2y,0.00001);
+//    sysPicard(g1,g2,0.00001);
 }

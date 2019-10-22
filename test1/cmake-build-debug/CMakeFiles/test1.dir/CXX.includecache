@@ -6,31 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.h
-
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/main.cpp
-iostream
--
-cmath
--
-iomanip
--
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.cpp
 realFunctions.h
 /cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.h
 exercicios_1.h
 /cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.h
 systemSolver.h
 /cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/systemSolver.h
+iomanip
+-
+
+/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/exercicios_1.h
 
 /cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/realFunctions.h
 iostream
 -
 cmath
 -
-
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/systemSolver.cpp
-systemSolver.h
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/systemSolver.h
 
 /cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/systemSolver.h
 iostream

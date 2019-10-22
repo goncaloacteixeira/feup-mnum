@@ -15,7 +15,7 @@ double secondFunction(double x);
 double secondFunctionG1(double x);
 double secondFunctionG2(double x);
 void secondExercise(void);
-
+void thirdExercise(void);
 
 
 

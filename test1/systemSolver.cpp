@@ -67,7 +67,6 @@ void sysNewton(double (*f1)(double, double), double (*f2)(double, double), doubl
     cout << "x: " << x << endl;
     cout << "y: " << y << endl;
     cout << "iterations: " << count << endl;
-
 }
 
 

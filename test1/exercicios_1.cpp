@@ -4,6 +4,7 @@
 
 #include "realFunctions.h"
 #include "exercicios_1.h"
+#include "systemSolver.h"
 
 #include <iomanip>
 
@@ -45,7 +46,7 @@ void firstExercise(void) {
 
     cout << "\n\n\t alinea c)\n";
 
-    cout << fixed << setprecision(6) ;
+    cout << fixed << setprecision(4) ;
 
     double a = 3.2;
     double b = 3.3;
@@ -92,10 +93,9 @@ void firstExercise(void) {
         else {
             a = rr;
         }
-        cout << a << ", " << rr << ", " << b << ", " << firstFunction(rr) << endl;
-        count += 1;
+        // cout << a << ", " << rr << ", " << b << ", " << firstFunction(rr) << endl;
+        count++;
     }
-
     cout << "min root(false pos): " << rr << endl;
 
 
@@ -112,7 +112,7 @@ void firstExercise(void) {
         else {
             a = rr;
         }
-        cout << a << ", " << rr << ", " << b << ", " << firstFunction(rr) << endl;
+        // cout << a << ", " << rr << ", " << b << ", " << firstFunction(rr) << endl;
         count += 1;
     }
 
@@ -124,9 +124,9 @@ void firstExercise(void) {
     double g = 3.2;
     double xn = g - firstFunction(g)/diffFirstFunction(g);
     while (abs(g - xn) > p) {
-        cout << "g: " << g;
+        // cout << "g: " << g;
         g = xn;
-        cout << " xn: " << xn << endl;
+        // cout << " xn: " << xn << endl;
         xn = g - firstFunction(g)/diffFirstFunction(g);
         count += 1;
     }
@@ -136,9 +136,9 @@ void firstExercise(void) {
     g = 5.6;
     xn = g - firstFunction(g)/diffFirstFunction(g);
     while (abs(g - xn) > p) {
-        cout << "g: " << g;
+        // cout << "g: " << g;
         g = xn;
-        cout << " xn: " << xn << endl;
+        // cout << " xn: " << xn << endl;
         xn = g - firstFunction(g)/diffFirstFunction(g);
         count += 1;
     }
@@ -167,7 +167,7 @@ void secondExercise(void) {
     /*
      * two possible expressions:
      *
-     *  - exp(-x); -log(x);
+     *  exp(-x); -log(x);
      *
      *  we are going to use only the first one
      */
@@ -180,7 +180,7 @@ void secondExercise(void) {
         g = secondFunctionG1(g);
         count1 += 1;
     }
-    cout << "root: " << setprecision(10) << g << " with " << count1 << " iterations\n";
+    cout << "root: " << setprecision(4) << g << " with " << count1 << " iterations\n";
 
     long count2 = 0;
     g = 1.1;
@@ -189,7 +189,7 @@ void secondExercise(void) {
         g = secondFunctionG1(g);
         count2 += 1;
     }
-    cout << "root: " << setprecision(10) << g << " with " << count2 << " iterations\n";
+    cout << "root: " << setprecision(4) << g << " with " << count2 << " iterations\n";
 
     if (count1 > count2) {
         cout << "second one is faster\n";
@@ -197,6 +197,31 @@ void secondExercise(void) {
     else
         cout << "first one is faster\n";
 }
+
+double f1_new(double x, double y) {
+    return x + y -3.0;
+}
+double f1x_new(double x, double y) {
+    return 1;
+}
+double f1y_new(double x, double y) {
+    return 1;
+}
+
+double f2_new(double x, double y) {
+    return x*x+y*y-9.0;
+}
+double f2x_new(double x, double y) {
+    return 2*x;
+}
+double f2y_new(double x, double y) {
+    return 2*y;
+}
+
+void thirdExercise(void) {
+    sysNewton(f1_new,f2_new,f1x_new,f1y_new,f2x_new,f2y_new,0.005);
+}
+
 
 
 
