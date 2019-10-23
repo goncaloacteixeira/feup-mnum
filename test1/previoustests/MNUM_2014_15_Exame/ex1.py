@@ -42,7 +42,3 @@ for i in range(2):
     else:
         a = m
 print(round(b,4))
-
-
-
-
