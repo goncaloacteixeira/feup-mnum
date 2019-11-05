@@ -43,5 +43,18 @@ def triangularization(m):
 
     return m
 
+m = triangularization(m)
+
+def residue(m, mC):
+    res = [0,0,0]
+    for i in range(len(mC)):
+        for j in range(len(mC)):
+            res[i] += mC[i][j]*m[j][3]
+
+    return [res[i] - mC[i][3] for i in range(len(m))]
 
 
+printMatrix(mC)
+print()
+printMatrix(triangularization(m))
+print(residue(m,mC))
