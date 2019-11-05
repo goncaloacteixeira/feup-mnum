@@ -16,7 +16,8 @@ import copy
 def printMatrix(m):
     for lin in m:
         for i in lin:
-            print(str(i) + "  ", end=" ")
+            print(str(round(i,2)) + "  ", end=" ")
+            # print(str(i) + "  ", end=" ")
         print()
 
 
@@ -35,4 +36,13 @@ def triangularization(m):
             aux2 = m[lin][diag]
             for col in range(diag, dimV + 1):
                 m[lin][col] -= m[diag][col] * aux2
+
+    for diag in range(dimV - 1, -1, -1):
+        for lin in range(diag - 1, -1, -1):
+            factor = m[lin][diag]
+            for col in range(diag, dimV + 1):
+                m[lin][col] -= m[diag][col] * factor
+
     return m
+
+printMatrix(triangularization(m))
