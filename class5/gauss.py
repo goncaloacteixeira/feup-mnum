@@ -34,7 +34,6 @@ def triangularization(m):
             for col in range(diag, dimV + 1):
                 m[lin][col] -= m[diag][col] * aux2
 
-
     for diag in range(dimV - 1, -1, -1):
         for lin in range(diag - 1, -1, -1):
             factor = m[lin][diag]
@@ -43,18 +42,24 @@ def triangularization(m):
 
     return m
 
+
 m = triangularization(m)
 
+
 def residue(m, mC):
-    res = [0,0,0]
+    res = [0, 0, 0]
     for i in range(len(mC)):
         for j in range(len(mC)):
-            res[i] += mC[i][j]*m[j][3]
+            res[i] += mC[i][j] * m[j][3]
 
     return [res[i] - mC[i][3] for i in range(len(m))]
 
 
+sol = [[1, 0, 0, 0.95], [0, 1, 0, 2.25], [0, 0, 1, 2.9]]
+
 printMatrix(mC)
 print()
 printMatrix(triangularization(m))
-print(residue(m,mC))
+print(residue(m, mC))
+print()
+print(residue(sol,mC))
