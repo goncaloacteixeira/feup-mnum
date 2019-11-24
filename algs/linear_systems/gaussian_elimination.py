@@ -10,10 +10,12 @@
       [a3, b3, c3, c]]
 """
 
+
 # função para mostrar uma matriz 3 por 3
 def printMatrix(amatrix):
     for line in amatrix:
         print(line[0], '  \t', line[1], ' \t', line[2], ' \t| ', line[3])
+
 
 # função para fazer a diagonalização de um sistema linear
 def diagonalization(amatrix):
@@ -47,18 +49,19 @@ def diagonalization(amatrix):
     """
     return amatrix
 
+
 # exemplo do livro
 m = [[3, 6, 9, 39],
      [2, 5, -2, 3],
      [1, 3, -1, 2]]
 
-m1 = [[1,1,1,6],
-      [1,2,2,9],
-      [2,1,3,11]]
+m1 = [[1, 1, 1, 6],
+      [1, 2, 2, 9],
+      [2, 1, 3, 11]]
 
-m2 = [[1,2,-3,1],
-      [3,-1,2,0],
-      [2,1,1,2]]
+m2 = [[1, 2, -3, 1],
+      [3, -1, 2, 0],
+      [2, 1, 1, 2]]
 
 # quando aparece "-0.0" é talvez porque o computador não consegue calcular o numero por ser infinitamente pequeno perto de zero
 # pelo lado esquerdo da origem
