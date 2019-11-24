@@ -62,3 +62,7 @@ m2 = [[1,2,-3,1],
 
 # quando aparece "-0.0" é talvez porque o computador não consegue calcular o numero por ser infinitamente pequeno perto de zero
 # pelo lado esquerdo da origem
+
+"""
+    TODO - Estabilidade externa e interna no método da eliminação de Gauss
+"""
