@@ -1,4 +1,4 @@
-from gauss import gaussian_elimination as gauss
+from linear_systems import gaussian_elimination as gauss
 
 """
     @:param sol Solução da matrix representada por @:param original
