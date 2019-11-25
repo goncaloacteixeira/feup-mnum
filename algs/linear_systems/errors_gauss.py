@@ -7,8 +7,6 @@ from linear_systems import gaussian_elimination as gauss
     
     função muito mal implementada -> melhor solução no ficheiro gauss_jacobi_seidel
 """
-
-
 def residue(sol, original):
     res = [0, 0, 0]
     for i in range(len(original)):
@@ -28,8 +26,6 @@ def printResidue(res):
     Exemplos para o calculo de resíduos de soluções
     de sistemas lineares usando o método de eliminação de Gauss
 """
-
-
 def example1():
     m = [[3, 6, 9, 39],
          [2, 5, -2, 3],
@@ -62,8 +58,6 @@ def example2():
     print("\nResidue X0")
     res0 = residue(sol0, m)
     printResidue(res0)
-
-
 """
     Fim dos exemplos
 """
@@ -76,8 +70,6 @@ def example2():
     Se o residuo desta nova solução (res1) for menor que res0 então podemos dizer que melhoramos 
     a nossa solução caso contrário, a sol0 é melhor que a sol1 e paramos por aqui.
 """
-
-
 def adjust(sol, res):
     for i in range(len(res)):
         sol[i][3] += res[i]
@@ -109,8 +101,6 @@ def example3():
     printResidue(res1)
 
     print("\nUma vez que res1 é maior que res0 a solução X0 é melhor.")
-
-
 """
     Fim do exemplo
 """

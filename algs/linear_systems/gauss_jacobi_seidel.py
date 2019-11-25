@@ -1,5 +1,3 @@
-import numpy as np
-
 """
     Resolver X sendo uma matriz A*X = b
 """
@@ -21,8 +19,6 @@ colB = [24, 27, 27]
     
     sendo que j é o indice da linha da matriz
 """
-
-
 def gaussJacobi(A, b, N=25, x=None, info=True):
     if x is None:
         x = [0 for i in A[0]]
@@ -50,8 +46,6 @@ def gaussJacobi(A, b, N=25, x=None, info=True):
     
     converge mais rapidamente
 """
-
-
 def gaussSeidel(A, b, N=25, x=None, info=True):
     if x is None:
         x = [0 for i in A[0]]
