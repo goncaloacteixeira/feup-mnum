@@ -4,6 +4,8 @@ from linear_systems import gaussian_elimination as gauss
     @:param sol Solução da matrix representada por @:param original
     
     Calcula o resíduo de uma certa solução
+    
+    função muito mal implementada -> melhor solução no ficheiro gauss_jacobi_seidel
 """
 
 
