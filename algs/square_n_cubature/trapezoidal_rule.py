@@ -1,13 +1,15 @@
 import math
-from numpy import arange # usada para fazer um loop com floats
+from numpy import arange  # usada para fazer um loop com floats
+
 
 # função-exemplo para teste
 def func1(x):
-    return math.sin(x)
+    return x ** 2
+
 
 # função-exemplo para segunda derivada de teste
 def diffdifffunc1(x):
-    return -math.sin(x)
+    return 2
 
 
 """
@@ -40,18 +42,30 @@ def calcErroTrap(x0, x1, diffdiff, N):
             aux = diffdiff(i)
     return -(x1 - x0) * aux * h ** 2 / 12
 
+
 # diferença entre o valor calculado analiticamente e o valor calculado
 # pela regra dos trapézios
 def erroObs(real, cal):
     return abs(real - cal)
 
 
-x0 = 0
-x1 = math.pi/2
-N = 80
-expected = 1
+def convergenceQuotient(x0, x1, f, N):
+    s0 = trapezoidalRule(x0, x1, f, N)
+    s1 = trapezoidalRule(x0, x1, f, N * 2)
+    s2 = trapezoidalRule(x0, x1, f, N * 4)
 
-res = trapezoidalRule(x0, x1, func1, N)
-print("Resultado:", res)
-print("Erro Cal.:", calcErroTrap(x0, x1, diffdifffunc1, N))
-print("Erro Obs.:", erroObs(expected, res))
+    order = round((s1 - s0) / (s2 - s1))
+
+    # finish
+
+
+def exampleTrap():
+    x0 = 0
+    x1 = 2
+    N = 80
+    expected = 8.0 / 3.0
+
+    res = trapezoidalRule(x0, x1, func1, N)
+    print("Resultado:", res)
+    print("Erro Cal.:", calcErroTrap(x0, x1, diffdifffunc1, N))
+    print("Erro Obs.:", erroObs(expected, res))
