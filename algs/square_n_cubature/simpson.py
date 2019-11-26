@@ -44,7 +44,7 @@ def exampleSimpson(compare=False):
         print("Trapezios")
         print("Resultado:", resT)
         print("Erro Obs.:", tp.erroObs(expected, resT))
-        print("CQ:", convergenceQuotient(x0, x1, tp.func1, N, tp.trapezoidalRule))
+        print("QC:", convergenceQuotient(x0, x1, tp.func1, N, tp.trapezoidalRule))
         print()
         exampleSimpson()
     else:
