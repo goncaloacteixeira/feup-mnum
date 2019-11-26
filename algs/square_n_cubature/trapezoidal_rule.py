@@ -4,12 +4,12 @@ from numpy import arange  # usada para fazer um loop com floats
 
 # função-exemplo para teste
 def func1(x):
-    return x ** 2
+    return math.sin(x)
 
 
 # função-exemplo para segunda derivada de teste
 def diffdifffunc1(x):
-    return 2
+    return -math.sin(x)
 
 
 """
@@ -56,14 +56,12 @@ def convergenceQuotient(x0, x1, f, N):
 
     order = round((s1 - s0) / (s2 - s1))
 
-    # finish
-
 
 def exampleTrap():
     x0 = 0
-    x1 = 2
+    x1 = math.pi/2
     N = 80
-    expected = 8.0 / 3.0
+    expected = 1
 
     res = trapezoidalRule(x0, x1, func1, N)
     print("Resultado:", res)

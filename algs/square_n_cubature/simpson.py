@@ -1,4 +1,5 @@
 from square_n_cubature import trapezoidal_rule as tp
+import math
 
 def simpson(x0, x1, f, N):
     res = 0
@@ -7,37 +8,37 @@ def simpson(x0, x1, f, N):
     x = x0 + h
 
     for i in range(1, N, 2):
-        res += 4*f(x)
-        x += h*2
+        res += 4 * f(x)
+        x += h * 2
 
-    x = x0 + 2*h
+    x = x0 + 2 * h
 
     for i in range(2, N, 2):
-        res += 2*f(x)
-        x += h*2
+        res += 2 * f(x)
+        x += h * 2
 
     return h * (f(x0) + f(x1) + res) / 3
 
-def exampleSimpson(compare = False):
+
+def exampleSimpson(compare=False):
     N = 80
     x0 = 0
-    x1 = 2
-    expected = 8.0/3.0
+    x1 = math.pi/2
+    expected = 1
 
-    res = simpson(x0,x1,tp.func1,N)
+    resT = tp.trapezoidalRule(x0,x1,tp.func1,N)
+    resS = simpson(x0, x1, tp.func1, N)
 
     if (compare):
         print("Trapezios")
-        print("Resultado:", res)
-        print("Erro Cal.:", tp.calcErroTrap(x0, x1, tp.diffdifffunc1, N))
-        print("Erro Obs.:", tp.erroObs(expected, res))
+        print("Resultado:", resT)
+        print("Erro Obs.:", tp.erroObs(expected, resT))
         print()
         exampleSimpson()
     else:
         print("Simpson")
-        print("Resultado:", res)
-        print("Erro Cal.:", tp.calcErroTrap(x0, x1, tp.diffdifffunc1, N))
-        print("Erro Obs.:", tp.erroObs(expected, res))
+        print("Resultado:", resS)
+        print("Erro Obs.:", tp.erroObs(expected, resS))
+
 
 exampleSimpson(True)
-
