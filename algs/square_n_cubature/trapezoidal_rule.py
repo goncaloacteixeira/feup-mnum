@@ -49,14 +49,6 @@ def erroObs(real, cal):
     return abs(real - cal)
 
 
-def convergenceQuotient(x0, x1, f, N):
-    s0 = trapezoidalRule(x0, x1, f, N)
-    s1 = trapezoidalRule(x0, x1, f, N * 2)
-    s2 = trapezoidalRule(x0, x1, f, N * 4)
-
-    order = round((s1 - s0) / (s2 - s1))
-
-
 def exampleTrap():
     x0 = 0
     x1 = math.pi/2
@@ -67,3 +59,5 @@ def exampleTrap():
     print("Resultado:", res)
     print("Erro Cal.:", calcErroTrap(x0, x1, diffdifffunc1, N))
     print("Erro Obs.:", erroObs(expected, res))
+    print("QC:", convergenceQuotient(x0,x1,func1,N,trapezoidalRule))
+
