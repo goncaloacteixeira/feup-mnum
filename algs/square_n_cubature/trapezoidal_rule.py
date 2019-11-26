@@ -47,11 +47,11 @@ def erroObs(real, cal):
 
 
 x0 = 0
-x1 = 3*math.pi/2
-N = 500000000
+x1 = math.pi/2
+N = 80
 expected = 1
 
 res = trapezoidalRule(x0, x1, func1, N)
-print("Resultado: ", res)
-print("Erro Cal.: ", calcErroTrap(x0, x1, diffdifffunc1, N))
+print("Resultado:", res)
+print("Erro Cal.:", calcErroTrap(x0, x1, diffdifffunc1, N))
 print("Erro Obs.:", erroObs(expected, res))
