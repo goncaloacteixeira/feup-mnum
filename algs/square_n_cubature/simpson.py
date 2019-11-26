@@ -32,7 +32,7 @@ def convergenceQuotient(x0, x1, f, N, method):
 
 
 def exampleSimpson(compare=False):
-    N = 80
+    N = 1000
     x0 = 0
     x1 = math.pi / 2
     expected = 1
