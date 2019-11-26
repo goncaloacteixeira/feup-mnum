@@ -1,6 +1,6 @@
 import math
 from numpy import arange  # usada para fazer um loop com floats
-
+from square_n_cubature import simpson
 
 # função-exemplo para teste
 def func1(x):
@@ -59,5 +59,5 @@ def exampleTrap():
     print("Resultado:", res)
     print("Erro Cal.:", calcErroTrap(x0, x1, diffdifffunc1, N))
     print("Erro Obs.:", erroObs(expected, res))
-    print("QC:", convergenceQuotient(x0,x1,func1,N,trapezoidalRule))
+    print("QC:", simpson.convergenceQuotient(x0,x1,func1,N,trapezoidalRule))
 
