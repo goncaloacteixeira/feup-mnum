@@ -143,22 +143,24 @@ def aureaSec(rangeVal, f, prec=0.1):
             d = b - B * (b - a)
             fd = f(d)
 
-    return [a, d, b]
+    return [a, b]
 
 
 def quadAdjust(points, f):
     x1 = points[0]
-    x2 = points[1]
-    x3 = points[2]
+    x3 = points[1]
+    x2 = (x1 + x3) / 2.0
 
     h = x2 - x1
 
     return x2 - (h * (f(x1) - f(x3))) / (2 * (f(x1) - 2 * f(x2) + f(x3)))
 
 
-interval = intervalSearch(2, 4, func, h=0.000001)
-interval = aureaSec(interval, func, prec=0.000000001)
+interval = intervalSearch(2, 4, func, h=0.0000001)
+print("interval after search:", interval)
+interval = aureaSec(interval, func, prec=0.0000000001)
+print("interval after aurea section:", interval)
 min = quadAdjust(interval, func)
 print("min calc:", min)
 print("f(min):", func(min))
-print("rel. error:", ((min-pi)/pi)*100.0, "%")
+print("rel. error:", ((min - pi) / pi) * 100.0, "%")
