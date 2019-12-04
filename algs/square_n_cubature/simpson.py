@@ -52,6 +52,3 @@ def exampleSimpson(compare=False):
         print("Resultado:", resS)
         print("Erro Obs.:", tp.erroObs(expected, resS))
         print("QC:", convergenceQuotient(x0, x1, tp.func1, N, simpson))
-
-
-exampleSimpson(True)
