@@ -44,9 +44,9 @@ print("6th:", sol[3][4])
 sol = lowerTriang(sol)
 
 print("\nalinea b) values:")
-print("x1",sol[0][4])
-print("x2",sol[1][4])
-print("x3",sol[2][4])
-print("x4",sol[3][4])
+print("x1:",sol[0][4])
+print("x2:",sol[1][4])
+print("x3:",sol[2][4])
+print("x4:",sol[3][4])
 
 # TODO - ESTABILIDADES (INTERNA E EXTERNA)
