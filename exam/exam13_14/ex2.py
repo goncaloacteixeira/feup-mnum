@@ -18,6 +18,7 @@ def newton(guess, f, df, iterations=2):
 
     return guess
 
+
 if __name__ == "__main__":
     print("Através do gráfico conseguimos ver que a função tem 3 zeros\n")
     newton(1.7, function, diffFunction)
