@@ -31,9 +31,9 @@ def printMatrix(amatrix):
 
 if __name__ == "__main__":
     print("Alinea a)")
-    matrix = [[1,1/2,1/3,-1],
-              [1/2,1/3,1/4,1],
-              [1/3,1/4,1/5,1]]
+    matrix = [[1, 1 / 2, 1 / 3, -1],
+              [1 / 2, 1 / 3, 1 / 4, 1],
+              [1 / 3, 1 / 4, 1 / 5, 1]]
 
     printMatrix(upperTriang(matrix))
 
