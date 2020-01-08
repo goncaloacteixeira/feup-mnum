@@ -2,6 +2,7 @@ def upperTriang(amatrix):
     dimV = len(amatrix)
     for diag in range(dimV):
         aux = amatrix[diag][diag]
+        # Dividir todos os membros pelo pivot, para ficar uma diagonal 1
         for col in range(dimV + 1):
             amatrix[diag][col] /= aux
         for lin in range(diag + 1, dimV):
