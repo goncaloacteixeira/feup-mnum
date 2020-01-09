@@ -35,9 +35,9 @@ def convergence_quotient(x0, x1, f, h, method):
     error = abs(s2 - s1) / (order ** 2 - 1)
 
     print(method.__name__)
-    print("x (h=%0.03f): %0.05f" % (h, s))
-    print("x (h=%0.03f): %0.05f" % (h / 2, s1))
-    print("x (h=%0.03f): %0.05f" % (h / 4, s2))
+    print("x (h=%0.06f): %0.05f" % (h, s))
+    print("x (h=%0.06f): %0.05f" % (h / 2, s1))
+    print("x (h=%0.06f): %0.05f" % (h / 4, s2))
     print("Quotient: %0.05f" % quotient)
     print("Error: %.08f" % error)
     print()
