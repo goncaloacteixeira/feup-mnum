@@ -7,7 +7,7 @@ def gradient(x0, y0, xf, yf, h0, f, dfx, dfy, N=20, info=True):
     y_list = [y]
 
     if info:
-        print("\niteration 0")
+        print("iteration 0")
         print("x:", x)
         print("y:", y)
         print("f(x,y):", f(x, y))
@@ -26,7 +26,7 @@ def gradient(x0, y0, xf, yf, h0, f, dfx, dfy, N=20, info=True):
             x_list.append(x)
             y_list.append(y)
             if info:
-                print("\niteration", i)
+                print("iteration", i)
                 print("x:", x)
                 print("y:", y)
                 print("f(x,y):", f(x, y))
