@@ -11,6 +11,9 @@ def gradient(x0, y0, xf, yf, h0, f, dfx, dfy, N=20, info=True):
         print("x:", x)
         print("y:", y)
         print("f(x,y):", f(x, y))
+        print("gradient-x:", dfx(x,y))
+        print("gradient-y:", dfy(x,y))
+        print()
 
     for i in range(1, N + 1):
         xn = x - dfx(x, y) * h
@@ -27,6 +30,9 @@ def gradient(x0, y0, xf, yf, h0, f, dfx, dfy, N=20, info=True):
                 print("x:", x)
                 print("y:", y)
                 print("f(x,y):", f(x, y))
+                print("gradient-x:", dfx(x, y))
+                print("gradient-y:", dfy(x, y))
+                print()
         else:
             h /= 2
 
