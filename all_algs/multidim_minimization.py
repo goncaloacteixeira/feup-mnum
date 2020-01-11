@@ -1,4 +1,4 @@
-def gradient(x0, y0, xf, yf, h0, f, dfx, dfy, N=20, info=True):
+def gradient(x0, y0, h0, f, dfx, dfy, N=20, info=True):
     x = x0
     y = y0
     h = h0
@@ -8,11 +8,11 @@ def gradient(x0, y0, xf, yf, h0, f, dfx, dfy, N=20, info=True):
 
     if info:
         print("iteration 0")
-        print("x:", x)
-        print("y:", y)
-        print("f(x,y):", f(x, y))
-        print("gradient-x:", dfx(x,y))
-        print("gradient-y:", dfy(x,y))
+        print("x: %.05f" % x)
+        print("y: %.05f" % y)
+        print("f(x,y): %.05f" % f(x, y))
+        print("gradient-x: %.05f" % dfx(x,y))
+        print("gradient-y: %.05f" % dfy(x,y))
         print()
 
     for i in range(1, N + 1):
@@ -26,18 +26,15 @@ def gradient(x0, y0, xf, yf, h0, f, dfx, dfy, N=20, info=True):
             x_list.append(x)
             y_list.append(y)
             if info:
-                print("iteration", i)
-                print("x:", x)
-                print("y:", y)
-                print("f(x,y):", f(x, y))
-                print("gradient-x:", dfx(x, y))
-                print("gradient-y:", dfy(x, y))
+                print("iteration",i)
+                print("x: %.05f" % x)
+                print("y: %.05f" % y)
+                print("f(x,y): %.05f" % f(x, y))
+                print("gradient-x: %.05f" % dfx(x,y))
+                print("gradient-y: %.05f" % dfy(x,y))
                 print()
         else:
             h /= 2
-
-        if x > xf and y > yf:
-            break
 
     return x, y
 
