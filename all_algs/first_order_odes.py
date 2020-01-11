@@ -21,13 +21,13 @@ def runga_kutta_2(h, x, y, f, xf):
 def runga_kutta_4(h, x, y, f, xf):
     h2 = (x + xf) / 2.0
     while x < xf:
-        sigma1 = h * f(x, y)
-        sigma2 = h * f(x + h / 2, y + sigma1 / 2)
-        sigma3 = h * f(x + h * h2 / 2, y + sigma2 / 2)
-        sigma4 = h * f(x + h, y + sigma3)
+        delta1 = h * f(x, y)
+        delta2 = h * f(x + h / 2, y + delta1 / 2)
+        delta3 = h * f(x + h * h2 / 2, y + delta2 / 2)
+        delta4 = h * f(x + h, y + delta3)
 
         x += h
-        y += (sigma1 + 2 * sigma2 + 2 * sigma3 + sigma4) / 6.0
+        y += (delta1 + 2 * delta2 + 2 * delta3 + delta4) / 6.0
     return y
 
 
