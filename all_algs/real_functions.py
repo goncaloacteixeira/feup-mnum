@@ -5,7 +5,6 @@ def bissection(a, b, f, iterations=10):
 
     for i in range(1, iterations + 1):
         m = (b + a) / 2.0
-        f;
         if f(a) * f(m) <= 0.0:
             b = m;
         else:
@@ -24,7 +23,7 @@ def false_position(a, b, f, iterations=10):
     print("b: %.05f" % b)
 
     for i in range(1, iterations + 1):
-        rr = (a * f(b) - b * f(a)) / (f(b) - f(a));
+        rr = (a * f(b) - b * f(a)) / (f(b) - f(a))
         if f(a) * f(rr) <= 0.0:
             b = rr
         else:
