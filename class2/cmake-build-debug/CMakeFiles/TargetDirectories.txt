@@ -1,3 +1,0 @@
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/class2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/class2/cmake-build-debug/CMakeFiles/class2.dir
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/class2/cmake-build-debug/CMakeFiles/edit_cache.dir

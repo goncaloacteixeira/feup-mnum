@@ -1,1 +1,0 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/class2.dir/main.cpp.o  -o class2.exe -Wl,--out-implib,libclass2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
