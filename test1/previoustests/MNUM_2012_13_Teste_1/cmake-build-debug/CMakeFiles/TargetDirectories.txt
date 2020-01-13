@@ -1,3 +1,0 @@
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/previoustests/MNUM_2012_13_Teste_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/previoustests/MNUM_2012_13_Teste_1/cmake-build-debug/CMakeFiles/MNUM_2012_13_Teste_1.dir
-/cygdrive/c/Users/skidr/OneDrive/Desktop/git/MNUM/test1/previoustests/MNUM_2012_13_Teste_1/cmake-build-debug/CMakeFiles/edit_cache.dir

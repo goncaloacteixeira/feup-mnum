@@ -1,1 +1,0 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/MNUM_2012_13_Teste_1.dir/main.cpp.o CMakeFiles/MNUM_2012_13_Teste_1.dir/newtonSystem.cpp.o  -o MNUM_2012_13_Teste_1.exe -Wl,--out-implib,libMNUM_2012_13_Teste_1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
